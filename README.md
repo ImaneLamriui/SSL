@@ -1,8 +1,9 @@
 <!-- Algunos de los usos más comunes de OpenSSL incluyen la creación y gestión de certificados digitales, la generación de claves criptográficas, la firma y verificación de datos, y la realización de pruebas de vulnerabilidad en sistemas y aplicaciones. -->
-# Allow HTTPS protocol using OpenSSL library and using Apache web server.
+<!-- En resumen, los dominios ".local" son una forma conveniente de identificar dispositivos y servicios en una red local sin necesidad de configurar un servidor DNS externo. Sin embargo, es importante recordar que estos nombres solo son válidos y significativos dentro de la red local en la que se utilizan. -->
+# Allow HTTPS protocol using OpenSSL library and Apache web server.
 # Prerequisites:
 * A web server (for example Apache) installed on your host.
-* A domain name for your website: in this example i have us domain www.empresa-tarea-daw02.local
+* A domain name for your website: in this example i have used the domain: www.empresa-tarea-daw02.local
 # Some of the most common uses for OpenSSL include creating and managing digital certificates, generating cryptographic keys, signing and verifying data, and performing vulnerability testing on systems and applications..
 # In the folder we have our project that contains our index.html page, in this case it is the page that comes by default with apache2.
 * Commands to install the openSSL package:<br>
