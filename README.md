@@ -21,7 +21,7 @@
 ## Test Configuration:
 * Before restarting Apache, it's a good practice to test the configuration for syntax errors:
 **sudo apachectl configtest**
-## nos piderá el sistema reiniciar el servidor:<br>
+## Reiniciar el servidor:<br>
 **systemstl restart apache2**<br>
 <img src="images/privateKey.png" alt="create-your-cert2"><br><br>
 ## Update DNS Records:
