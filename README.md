@@ -28,11 +28,11 @@
 * Ensure your domain's DNS records (CNAME or other) point to the correct IP address of your host.
 ## creamos el nuevo certificado:<br>
 **sudo opessl req -new -nodes -keyout www.empresa-tarea-daw02.local.key -out www.empresa-tarea-daw02.local.csr**<br> 
-## se genera la clave privada del certificado(private key)<br>
+## se genera la clave privada del certificado (private key)<br>
 <img src="images/10y.png" alt="cert-created"><br><br>
-## lo personalizamos y le signamos al certificado 10 años de validez<br>
+## lo personalizamos y le asignamos al certificado 10 años de validez<br>
 **sudo openssl x509 -in www.empresa-tarea-daw02.local.csr -out www.empresa-tarea-daw02.local.crt -req -signkey www.empresa-tarea-daw02.local.key -days 3650**<br>
-## si a pasado todo bien: en la firma sale el resultado ok(signature ok)<br>
+## si ha pasado todo bien: en la firma sale el resultado ok (signature ok)<br>
 ## Update Server Configuration (Apache): todo-empresa-tarea-daw02-ssl.conf y activarlo:<br>
 **sudo a2ensite todo-empresa-tarea-daw02-ssl.conf**<br></li>
 <img src="images/update-ssl-file.png" alt="update-ssl-file"><br><br>
@@ -45,13 +45,13 @@ sitio, posteriormente crearé una página html para el nuevo sitio, es esta pág
 **sudo a2dissite 000-default.conf**<br>
 **systemctl reload apache2**<br>
 <img src="images/disabled-000-default.png" alt="disabled-000-default"><br><br>
-## comprobamos accediendo con el protocolo https, el certificado es autofirmado, y no se ha reconocido del navegador porque no lo contiene en su listado de los certofocados reconocidos.Por eso muestra adverencia en la url<br>
+## comprobamos accediendo con el protocolo https, el certificado es autofirmado, no hasido reconocido por el navegador porque no lo contiene en su listado de los certificados reconocidos.Por eso muestra adverencia en la url<br>
 <img src="images/webSSL.png"  alt="webSSL"><br><br>
-## Podemos personalizar la página html para obtenerla por ejemplo así(imagen), el archivo html se encuentra en la carpeta #/var/www/todo-empresa-tarea-daw02<br>
+## Podemos personalizar la página editando el código html ,el archivo html se encuentra en la carpeta #/var/www/todo-empresa-tarea-daw02<br>
 <img src="images/createhtml.png" alt="HTML"><br><br>
-## comprobamos administrador de certificados:<br>
+## comprobamos el administrador de certificados:<br>
 <img src="images/certAdministrator.png" alt="certAdministrator"><br><br>
-## comprobamos puerto activado:<br>
+## comprobamos el puertosi esta activado:<br>
 **sudo netstat -tuln**<br>
 <img src="images/port443Activate.png" alt="port443Activate"><br><br>
    
